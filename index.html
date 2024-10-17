@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodiest List</title>
+
+    <style>
+        @font-face {
+            font-family: 'Hubballi';
+            src: url('Fonts/Hubballi.ttf');
+        }
+
+        * {
+            scroll-behavior: smooth;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Hubballi';
+        }
+
+        #navbar {
+            background-color: #3c455c;
+            height: 100px;
+            padding-left: 50px;
+            display: flex;
+            align-items: center;
+            font-size: 30px;
+            color: white;
+        }
+
+        #boxlist {
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            width: 100%;
+        }
+
+        #row {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin: 20px;
+        }
+
+        #card {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 210px;
+            width: 480px;
+            background-color: #d9d9d9;
+            border-radius: 10px;
+            transition: 0.4s;
+        }
+
+        #thumbnail {
+            height: 170px;
+            width: auto;
+            border-radius: 10px;
+            transition: 0.4s;
+        }
+
+        #Nama {
+            transition: 0.4s;
+        }
+
+        #more {
+            font-size: 0px;
+            color: #60412b;
+            transition: 0.3s;
+        }
+
+        #card:hover {
+            background-color: #9aacb8;
+            width: 500px;
+            height: 230px;
+        }
+
+        #card:hover #thumbnail {
+            height: 180px;
+            width: auto;
+        }
+
+        #card:hover #more {
+            font-size: 20px;
+        }
+
+        #card:hover #Nama {
+            font-size: 30px;
+        }
+
+        #deskripsicardRendang {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            display: none;
+            background-color: #dfdfdf;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        #deskripsicardSate {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            display: none;
+            background-color: #dfdfdf;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        #deskripsicardSoto {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            display: none;
+            background-color: #dfdfdf;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        #deskripsicardSeblak {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            display: none;
+            background-color: #dfdfdf;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        #thumbnail2 {
+            height: 300px;
+            width: auto;
+            border-radius: 10px;
+            transition: 0.4s;
+        }
+
+        #deskripsi {
+            width: 80%;
+            margin: 20px;
+            font-size: 20px;
+            text-align: justify;
+        }
+
+        #Tutup {
+            background-color: #3c455c;
+            color: white;
+            font-size: 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            width: 100px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <h1>Foodiest List</h1>
+    </nav>
+    <div id="boxlist">
+        <div id="row">
+            <div id="card">
+                <h1 id="Nama">Rendang
+                    <br>
+                    <p id="more" onclick="BukaRendang()">Baca Selengkapnya>></p>
+                </h1>
+                <img id="thumbnail" src="Images/Rendang.jpeg">
+            </div>
+            <div id="card">
+                <h1 id="Nama">Sate<br>Madura
+                    <br>
+                    <p id="more" onclick="BukaSate()">Baca Selengkapnya>></p>
+                </h1>
+                <img id="thumbnail" src="Images/Satemadura.jpeg">
+            </div>
+        </div>
+        <div id="row">
+            <div id="card">
+                <h1 id="Nama">Seblak<br>Bandung <br>
+                    <p id="more" onclick="BukaSeblak()">Baca Selengkapnya>></p>
+                </h1>
+                <img id="thumbnail" src="Images/Seblak.jpeg">
+            </div>
+            <div id="card">
+                <h1 id="Nama">Soto <br>
+                    <p id="more" onclick="BukaSoto()">Baca Selengkapnya>></p>
+                </h1>
+                <img id="thumbnail" src="Images/Soto.jpeg">
+            </div>
+        </div>
+        <div id="row">
+            <div id="card">
+                <h1 id="Nama">Rendang <br>
+                    <p id="more">Baca Selengkapnya>></p>
+                </h1>
+                <img id="thumbnail" src="Images/Rendang.jpeg">
+            </div>
+            <div id="card">
+                <h1 id="Nama">Rendang <br>
+                    <p id="more">Baca Selengkapnya>></p>
+                </h1>
+                <img id="thumbnail" src="Images/Rendang.jpeg">
+            </div>
+        </div>
+    </div>
+    <div id="deskripsicardRendang">
+        <h1>Rendang</h1>
+        <img id="thumbnail2" src="Images/Rendang.jpeg">
+        <div id="deskripsi">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi earum, omnis accusantium atque unde quos
+                pariatur reiciendis voluptatibus explicabo doloribus quis beatae, ab neque dignissimos laborum
+                perspiciatis architecto dolore minima?</p>
+        </div>
+        <div id="Tutup" onclick="TutupRendang()">Tutup</div>
+    </div>
+    <div id="deskripsicardSate">
+        <h1>Sate</h1>
+        <img id="thumbnail2" src="Images/Satemadura.jpeg">
+        <div id="deskripsi">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi earum, omnis accusantium atque unde quos
+                pariatur reiciendis voluptatibus explicabo doloribus quis beatae, ab neque dignissimos laborum
+                perspiciatis architecto dolore minima?</p>
+        </div>
+        <div id="Tutup" onclick="TutupSate()">Tutup</div>
+    </div>
+    <div id="deskripsicardSoto">
+        <h1>Soto</h1>
+        <img id="thumbnail2" src="Images/Soto.jpeg">
+        <div id="deskripsi">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi earum, omnis accusantium atque unde quos
+                pariatur reiciendis voluptatibus explicabo doloribus quis beatae, ab neque dignissimos laborum
+                perspiciatis architecto dolore minima?</p>
+        </div>
+        <div id="Tutup" onclick="TutupSoto()">Tutup</div>
+    </div>
+    <div id="deskripsicardSeblak">
+        <h1>Seblak</h1>
+        <img id="thumbnail2" src="Images/Seblak.jpeg">
+        <div id="deskripsi">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi earum, omnis accusantium atque unde quos
+                pariatur reiciendis voluptatibus explicabo doloribus quis beatae, ab neque dignissimos laborum
+                perspiciatis architecto dolore minima?</p>
+        </div>
+        <div id="Tutup" onclick="TutupSeblak()">Tutup</div>
+    </div>
+
+
+    <Script>
+        function BukaRendang() {
+            document.getElementById("deskripsicardRendang").style.display = "flex";
+        }
+        function TutupRendang() {
+            document.getElementById("deskripsicardRendang").style.display = "none";
+        }
+
+        function BukaSate() {
+            document.getElementById("deskripsicardSate").style.display = "flex";
+        }
+        function TutupSate() {
+            document.getElementById("deskripsicardSate").style.display = "none";
+        }
+
+        function BukaSoto() {
+            document.getElementById("deskripsicardSoto").style.display = "flex";
+        }
+        function TutupSoto() {
+            document.getElementById("deskripsicardSoto").style.display = "none";
+        }
+
+        function BukaSeblak() {
+            document.getElementById("deskripsicardSeblak").style.display = "flex";
+        }
+        function TutupSeblak() {
+            document.getElementById("deskripsicardSeblak").style.display = "none";
+        }
+    </Script>
+</body>
+
+</html>
